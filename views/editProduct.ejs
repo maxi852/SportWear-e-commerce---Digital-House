@@ -1,0 +1,102 @@
+<%- include('partials/head.ejs') %>
+<head>
+  <link rel="stylesheet" href="/css/editProduct.css" />
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+  <main>
+    <h1>EDITANDO el producto:</h1>
+    <div class="productoAeditar"><%= products.nombre %></div>
+    <form
+      action="/products/editar/<%= products.idproducto %>?_method=PUT"
+      git
+      method="post"
+      class="flex-container"
+      enctype="multipart/form-data"
+    >
+      <br />
+      <input
+        type="text"
+        placeholder="Nombre de producto"
+        name="name"
+        class="input-text"
+      />
+      <% if (locals.errors && errors.name) { %>
+      <p class="text-danger"><%= errors.name.msg %></p>
+
+      <% } %>
+      <br />
+      <input
+        type="text"
+        placeholder="Description"
+        name="description"
+        class="input-text"
+      />
+      <% if (locals.errors && errors.description) { %>
+      <p class="text-danger"><%= errors.description.msg %></p>
+
+      <% } %>
+      <br />
+
+      <label for="productImage" class="imagen-producto"
+        >Subir imágen de producto</label
+      >
+      <input
+        type="file"
+        name="productImage"
+        id="productImage"
+        class="sube-archivo"
+      />
+      <% if (locals.errors && errors.productImage) { %>
+      <p class="text-danger"><%= errors.productImage.msg %></p>
+
+      <% } %>
+
+      <br />
+
+      <label for="calzado" class="label-selector">Tipo Calzado</label>
+      <select name="calzado" id="calzado" class="selectores">
+        <% for (let i = 0; i < tipoCalzado.length; i++) { %>
+        <option value="<%= tipoCalzado[i].idtipo_calzado %> ">
+          <%= tipoCalzado[i].tipo_de_calzado %>
+        </option>
+        <% } %>
+      </select>
+
+      <label for="color" class="label-selector">Color</label>
+      <select name="color" id="color" class="selectores">
+        <option value="Azul">Azul</option>
+        <option value="Verde">Verde</option>
+        <option value="Blanco">Blanco</option>
+        <option value="Negro">Negro</option>
+        <option value="Amarillo">Amarillo</option>
+        <option value="Rojo">Rojo</option>
+      </select>
+
+      <label for="marca" class="label-selector">Marca</label>
+      <select name="marca" id="marca" class="selectores">
+        <option value="9">Adidas</option>
+        <option value="10">Nike</option>
+      </select>
+
+      <br />
+
+      <label for="precio"></label>
+      <input
+        type="number"
+        placeholder="Precio en pesos"
+        name="precio"
+        id="precio"
+        class="input-text"
+      />
+      <% if (locals.errors && errors.precio) { %>
+      <p class="text-danger"><%= errors.precio.msg %></p>
+
+      <% } %>
+      <br />
+
+      <input type="submit" value="Editar" class="crear-button" />
+      <br />
+    </form>
+  </main>
+</body>

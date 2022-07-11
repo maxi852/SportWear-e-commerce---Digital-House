@@ -1,0 +1,26 @@
+[
+ {
+  "name": "lucas",
+  "email": "as@as.com",
+  "password": "$2a$10$Q9hhuUsD3.2br6sOfYCQoOFro7CGErA2DBn0yetP1aL/77BzV0uHW",
+  "image": "1642118451217.jpg"
+ },
+ {
+  "name": "Lao",
+  "email": "colomae@hotmail.com",
+  "password": "$2a$10$3EMEieSD2Rhjjte.sXWXHeVXXWupMipfWFYLSZotMd.F9/WTO02fa",
+  "image": "1643483266472.jpg"
+ },
+ {
+  "name": "Santiago",
+  "email": "santiagoboe04@gmail.com",
+  "password": "$2a$10$JSKvZyCEHf5FYg36AtTFaOkXjDLv9ubNVUrJa2Cbb006QE.enp0fe",
+  "image": "1643566110180.png"
+ },
+ {
+  "name": "Santiago",
+  "email": "santiagoboe04@gmail.com",
+  "password": "$2a$10$buTsuUgpqt9ElhanX3ueyu1EDI8iBkmFUQRKT52bDc2hKNCQYHXv6",
+  "image": "1643671407278.png"
+ }
+]

@@ -1,0 +1,62 @@
+<%- include('partials/head.ejs') %>
+<head>    <link rel="stylesheet" href="/css/our_products.css" />
+</head>
+
+  <body>
+    
+<%- include('partials/header.ejs') %>
+
+<main>
+
+    <!--
+    <section class="video-intro">
+      <!--
+      <video width="25%"  autoplay muted loop>
+        <source src="/video/mujeres-bulgara-v.mp4" type="video/mp4">
+      </video>
+      <div class="intro-text">
+        <h1>Tenemos productos para <span>todas</span> las personas, echales un ojo acá abajo👇👇</h1>
+        <a href="#productos" class="ver-productos">Ir a ver</a>
+      </div>
+     
+    </section>
+     -->
+    <!--
+    <section>
+      <article class="fondo">
+        <img src="/images/our_products/fondo-our-products.jpg" alt="our_products">
+      </article>
+    </section>
+    -->
+
+    <section class="section-products" id="productos">
+      <div>
+        <img src="/images/our_products/fondo-our-products.jpg" class="fondo-our-products">
+      </div>  
+
+      <h2>NUESTROS PRODUCTOS</h2>
+      <div class="our-products">
+        
+        <% for (let i = 0; i < products.length; i++) { %>
+          <a href="/products/detail/<%= products[i].idproducto %>">
+          <article class="product">
+            <img src="/images/our_products/<%= products[i].image %> " alt="producto1"  >
+            <button class="button"> IR A VERLO<i class="fas fa-arrow-right"></i></a></button>
+          </article>
+        </a>
+        <% } %>
+          
+           
+        <!-- Agregar todas las imagenes de productos y hacer que la imagen ser un boton, eliminar el boton -->
+        
+        
+      </div>
+    </section>
+    
+</main>
+    
+
+<%- include('partials/footer') %>
+    
+  </body>
+</html>

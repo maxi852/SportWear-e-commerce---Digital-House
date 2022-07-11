@@ -1,0 +1,25 @@
+<%- include('partials/head.ejs') %>
+<head>    
+  <link rel="stylesheet" href="/css/alreadyLogged.css" />
+</head>
+
+<%- include('partials/header.ejs') %>
+  <body>
+      <main>
+        <div class="message-container">
+          <div class="text">
+            <h1 class="logged-text">Jummmm, al parecer ya estás logueado</h1>
+            <a href="/" class="redirect-text"><h1>👉¿Porqué no vuelves al inicio?👈</h1></a>   
+          </div>
+          <div class="gif">
+            <iframe src="https://giphy.com/embed/dOKVNQNTKiWGY" width="480" height="270" frameBorder="0" class="gif-embed" allowFullScreen></iframe>
+          </div>
+          <div class="user-redirect">
+            <a href="/usuario" class="redirect-text"><h1>Ir a mi perfil</h1></a>
+          </div>
+        </div>        
+      </main>
+      
+      <%- include('partials/footer') %>      
+</body>
+</html>

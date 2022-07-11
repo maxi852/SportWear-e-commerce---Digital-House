@@ -1,0 +1,25 @@
+<%- include('partials/head.ejs') %>
+<head><link rel="stylesheet" href="/css/profile.css" /></head>
+<%- include('partials/header.ejs') %>
+  <body>
+    <main>  
+      <div class="profile-head">
+        <h3> <%= usuario.nombre  %> <%= usuario.apellido  %> </h3>
+        <div class="user-image">
+          <img src="/images/profileImages/<%= usuario.profile_image  %> " alt="userImage" >
+        </div>  
+      </div>
+      <div class="profile-head">
+        <h3> <%= usuario.email  %>  </h3>
+        
+        <% if (usuario.tipo_usuario == 1) { %>
+            <h3>Administrador</h3>
+        <%  } else { %>
+            <h3>Cliente</h3>
+        <% } %> 
+      </div>
+    </main>    
+   
+      <%- include('partials/footer') %>
+  </body>
+</html>

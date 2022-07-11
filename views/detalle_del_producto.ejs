@@ -1,0 +1,150 @@
+<%- include('partials/head.ejs') %>
+<head>    <link rel="stylesheet" href="/css/detalle-del-producto.css" />
+</head>
+
+  <body>
+    
+<%- include('partials/header.ejs') %>
+        <section>
+            <div class="nombre-del-producto">
+            <h3 class="nombre-del-producto"><%= products.nombre %> </h3>
+            </div>
+            <div class="div-descripcion">
+                <h3 class="descripcion">
+                    Descripción del producto:  
+                </h3>
+                <p class="descripcion">
+                    <%= products.descripcion %>
+                </p>
+            </div>
+            <div class="imagen-producto">
+            <img class="ver-producto" src="/images/our_products/<%= products.image %> " alt="product-image">
+        </div>
+        <div>
+            <article class="precio"> <%=  products.precio %></article>
+        </div>
+        
+        <!--
+            <form method="POST" action="/">
+                
+                <label for="talles" class="titulo_talles">Selecciona el Talle</label>
+                
+                <div class="div-input">
+                    <% for(let i = 39; i<=44; i++) { %> 
+
+                        <div class="talle">
+                            <input type="radio" name="talle" class="opcion-talle" id=${´talle_<% i %>´}  >  
+                            <label for="talle"><%= i %> </label>  
+                        </div>
+
+                    <% } %>     
+
+                </div>
+            </form>
+            -->
+            
+            <form method="POST" action="/">
+                <div class="talle-nuevo">    
+                <label for="talle-nuevo" >Talles</label>
+                <select id="talle-nuevo" class="select-talle">
+                    <option value="38">38   </option>                    
+                    <option value="39">39   </option>
+                    <option value="40">40   </option>
+                    <option value="41">41   </option>
+                    <option value="42">42   </option>
+                    <option value="43">43   </option>
+                    <option value="44">44   </option>
+                </select>
+                </div>
+
+
+                <!--
+                <div class="cantidad-input">
+                    <% for(let i = 0; i<=10; i++) { %> 
+
+                        <div class="talle">
+                            <input type=text name="talle" class="opcion-talle" id=${´talle_<% i %>´}  >  
+                            <label for="talle"><%= i %> </label>  
+                        </div>
+                        
+
+                    <% } %>     
+                
+                </div>
+                -->
+            </form>
+
+
+            <form method="POST" action="/">
+                <div class="cantidad">    
+                <label for="cantidad" >Cantidad</label>
+                <select id="count" class="select-cantidad">
+                    <option value="1">1   </option>                    
+                    <option value="2">2   </option>
+                    <option value="3">3   </option>
+                </select>
+                </div>
+
+
+                <!--
+                <div class="cantidad-input">
+                    <% for(let i = 0; i<=10; i++) { %> 
+
+                        <div class="talle">
+                            <input type=text name="talle" class="opcion-talle" id=${´talle_<% i %>´}  >  
+                            <label for="talle"><%= i %> </label>  
+                        </div>
+                        
+
+                    <% } %>     
+                
+                </div>
+                -->
+            </form>
+
+
+
+
+
+
+            <div class="tarjetas"> 
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-diners-club"></i>
+            </div>
+            <div class="buttons-container">
+                <div class="buttons">
+                    <button type="submit" name="añadir" class="boton boton-verde">Añadir al Carrito</button>
+                    <button type="submit" name="comprar"class="boton boton-verde">Comprar Producto</button>
+                    <form action="/products/editar/<%= products.idproducto %>" method="GET">
+                        <button type="submit" name="editar" class="boton boton-editar">Editar este producto</button>
+                    </form>
+                    <form action="/products/borrar/<%= products.idproducto %>?_method=DELETE" method="POST">
+                    <button type="submit" name="editar" class="boton boton-delete">Borrar este producto</button>
+                    </form>
+                </div>
+            </div>
+            
+
+            
+
+           
+
+        </div>
+
+        <div>
+
+
+        </div>
+
+        </section>    
+
+    <%- include('partials/footer') %>
+
+    <script src="/js/agregarAcarrito.js">
+    </script>
+    
+</body>
+
+</html>

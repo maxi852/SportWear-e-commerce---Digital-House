@@ -1,0 +1,112 @@
+<%- include('partials/head.ejs') %>
+<head>
+  <link rel="stylesheet" href="/css/formProduct.css" />
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+  <main>
+    <h1>CREAR PRODUCTO</h1>
+    <div class="flex-container">
+      <form
+        action="/products/crear"
+        method="post"
+        enctype="multipart/form-data"
+        class="form-create"
+      >
+        <input
+          type="text"
+          placeholder="Products name"
+          name="name"
+          class="input-text input-name"
+        />
+        <p class="front-error-name text-danger"></p>
+        <% if (locals.errors && errors.name) { %>
+          <p class="text-danger">
+            <%= errors.name.msg %> 
+          </p>
+         
+        <% } %>
+        <br />
+        <input
+          type="text"
+          placeholder="Description"
+          name="description"
+          class="input-text input-description"
+          id="description"
+        />
+        <p class="front-error-description text-danger"></p>
+        <% if (locals.errors && errors.description) { %>
+          <p class="text-danger">
+            <%= errors.description.msg %> 
+          </p>
+         
+        <% } %>
+        <br />
+
+        <label for="productImage">Imágen de producto</label>
+        <input type="file" name="productImage" id="productImage" />
+        <% if (locals.errors && errors.productImage) { %>
+          <p class="text-danger">
+            <%= errors.productImage.msg %> 
+          </p>
+         
+        <% } %>
+
+        <br />
+
+        <label for="calzado">Tipo Calzado</label>
+        <select name="calzado" id="calzado">
+          <% for (let i = 0; i < tipoCalzado.length; i++) { %>
+          <option value="<%= tipoCalzado[i].idtipo_calzado %> ">
+            <%= tipoCalzado[i].tipo_de_calzado %>
+          </option>
+          <% } %>
+        </select>
+
+        <label for="color">Color</label>
+        <select name="color" id="color">
+          <option value="Azul">Azul</option>
+          <option value="Verde">Verde</option>
+          <option value="Blanco">Blanco</option>
+          <option value="Negro">Negro</option>
+          <option value="Amarillo">Amarillo</option>
+          <option value="Rojo">Rojo</option>
+        </select>
+
+        <label for="marca">Marca</label>
+        <select name="marca" id="marca">
+          <option value="9">Adidas</option>
+          <option value="10">Nike</option>
+        </select>
+
+        <br />
+
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio" class="input-text input-precio" />
+        <p class="front-error-precio text-danger"></p>
+        <% if (locals.errors && errors.precio) { %>
+          <p class="text-danger">
+            <%= errors.precio.msg %> 
+          </p>
+         
+        <% } %>
+        <br />
+
+        <button type="submit" class="crear-button" />Crear</button>
+        <br />
+      </form>
+    </div>
+
+    <div class="item-existe">
+      <h3>Editar item existente?</h3>
+      <form action="/products/" method="GET">
+        <button href="/products" type="submit" class="editar-button">
+          Ir a todos los productos
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/js/frontCrearProducto.js"></script>
+  <%- include('partials/footer') %>
+</body>

@@ -1,0 +1,52 @@
+<%- include('partials/head.ejs') %>
+<head>    <link rel="stylesheet" href="/css/login-styles.css" />
+</head>
+
+  <body>
+    
+<%- include('partials/header.ejs') %>
+
+  <main>
+        <h2 class="titulo-bienvenida">Bienvenidos!</h2>
+        <h3 class="titulo-login">Iniciar sesión</h3>
+        <div class="contenedor-form">
+
+          <form action="/login" method="POST">            
+            <div class="info">
+                  <label for="email">Correo electrónico</label> <br> 
+                  <input type="email" name="email" id="email">
+                  <% if (locals.errors && errors.email) { %>
+                    <p class="text-danger">
+                      <%= errors.email.msg %> 
+                    </p>
+                   
+                  <% } %>
+                  <p class="errorEmail text-danger"></p>
+            </div>            
+            <div class="info">
+                  <label for="password">Contraseña</label> <br>
+                  <input type="password" name="password" id="password"> 
+                  <% if (locals.errors && errors.password) { %>
+                    <p class="text-danger">
+                      <%= errors.password.msg %> 
+                    </p>
+                   
+                  <% } %> 
+                  <p class="errorPassword text-danger"></p>
+            </div>
+            <div class="boton">
+              <div class="recordame">
+                <label for="recordame">Recordar sesión?</label>
+                <input type="checkbox" name="recordame">
+              </div>
+              <button type="submit">Entrar</button>
+            </div>           
+          </form>
+        </div>                
+  </main>
+  
+  <script src="/js/frontLogin.js"></script>
+  <%- include('partials/footer') %>
+
+</body>
+</html>

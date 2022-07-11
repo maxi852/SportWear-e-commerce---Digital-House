@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+header {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo-home {
+  width: 100%;
+}
+
+.text-danger {
+  color: red;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1024px) {
+  #check {
+    display: none;
+  }
+
+  header {
+    background-color: black;
+    padding: 0 2%;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .busqueda-producto {
+    border-radius: 30%;
+    width: 30%;
+  }
+
+  .mobile-nav input {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+  }
+
+  .opciones-nav {
+    display: flex;
+    margin-top: 3%;
+  }
+
+  a {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .mobile-nav ul li {
+    margin-left: 50px;
+  }
+
+  li a {
+    transition: all 0.1s ease;
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+
+  .tope-page {
+    width: 20%;
+    margin-top: 20px;
+  }
+
+  .logo-home {
+    width: 100%;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  /* Contenido mensaje */
+
+  main {
+    background-color: black;
+  }
+
+  .message-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+  }
+
+  .logged-text {
+    background-color: #7c83fd;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .redirect-text h1 {
+    color: white;
+    background-color: #c400ff;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+
+  .text {
+    align-content: center;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 5%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  .logo-footer {
+    width: 30%;
+  }
+
+  .phrase {
+    width: 100%;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  /*Navbar*/
+
+  #check {
+    display: none;
+  }
+
+  a {
+    color: white;
+  }
+
+  ul {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    top: 160px;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(black, #232429);
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    font-size: 2rem;
+    margin: 2%;
+  }
+
+  .checked {
+    left: 0;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-home {
+    width: 100%;
+  }
+
+  .tope-page {
+    width: 100%;
+  }
+
+  .busqueda-producto {
+    width: 80%;
+  }
+
+  .mobile-nav input {
+    border: none;
+    padding: 15px;
+    background-color: white;
+    border-radius: 20px;
+    width: 85%;
+  }
+
+  .search-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .fa-bars {
+    color: white;
+    font-size: 3rem;
+  }
+  /* Contenido mensaje */
+
+  main {
+    background-color: black;
+  }
+
+  .message-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+  }
+
+  .logged-text {
+    background-color: #7c83fd;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .redirect-text h1 {
+    color: white;
+    background-color: #c400ff;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+
+  .text {
+    align-content: center;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 10%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  .logo-footer {
+    width: 50%;
+  }
+
+  .phrase {
+    width: 100%;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /*Navbar*/
+
+  #check {
+    display: none;
+  }
+
+  a {
+    color: white;
+  }
+
+  ul {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    top: 160px;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(black, #232429);
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    font-size: 2rem;
+    margin: 2%;
+  }
+
+  .checked {
+    left: 0;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-home {
+    width: 100%;
+  }
+
+  .tope-page {
+    width: 100%;
+  }
+
+  .busqueda-producto {
+    width: 80%;
+  }
+
+  .mobile-nav input {
+    border: none;
+    padding: 3%;
+    background-color: white;
+    border-radius: 20px;
+    width: 85%;
+  }
+
+  .search-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .fa-bars {
+    color: white;
+    font-size: 2rem;
+  }
+
+  /* Contenido mensaje */
+
+  main {
+    background-color: black;
+  }
+
+  .message-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+  }
+
+  .logged-text {
+    background-color: #7c83fd;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+
+  .redirect-text h1 {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #c400ff;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+
+  .text {
+    align-content: center;
+  }
+
+  .gif-embed {
+    width: 300px;
+    height: 200px;
+  }
+
+  /* footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 20% 15%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+  }
+
+  .logo-footer {
+    width: 50%;
+  }
+
+  .phrase {
+    margin-top: 50px;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
+}

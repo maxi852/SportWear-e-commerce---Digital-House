@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "name": "Pumita",
+    "precio": "20001",
+    "description": "zapas rosa furioso",
+    "category": "categoria1 ",
+    "talla": "35 ",
+    "image": "1643483686603.jfif"
+  },
+  {
+    "id": 1,
+    "name": "Canterbury",
+    "precio": "12525",
+    "description": "No tengo",
+    "category": "categoria1 ",
+    "talla": "42 ",
+    "image": "1643483780969.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Adidas",
+    "precio": "12525",
+    "description": "No tengo",
+    "category": "categoria1 ",
+    "talla": "42 ",
+    "image": "adidas-Running-UltraBOOST21-8.jpg"
+  }
+]

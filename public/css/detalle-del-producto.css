@@ -1,0 +1,764 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo-home {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  #check {
+    display: none;
+  }
+
+  header {
+    background-color: black;
+    padding: 0 2%;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .busqueda-producto {
+    border-radius: 30%;
+    width: 30%;
+  }
+
+  .mobile-nav input {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+  }
+
+  .opciones-nav {
+    display: flex;
+    margin-top: 3%;
+  }
+
+  a {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .mobile-nav ul li {
+    margin-left: 50px;
+  }
+
+  li a {
+    transition: all 0.1s ease;
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+
+  .tope-page {
+    width: 20%;
+    margin-top: 20px;
+  }
+
+  .logo-home {
+    width: 100%;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  /*Product section*/
+
+  div.nombre-del-producto {
+    padding: 25px;
+    background: black;
+    height: 65px;
+  }
+  h3.nombre-del-producto {
+    color: #ffffff;
+    font-size: 2.5rem;
+  }
+
+  .imagen-producto {
+    padding: 30px;
+    background: black;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagen-producto img {
+    width: 60%;
+    border-radius: 1%;
+  }
+
+  .precio {
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 0 20px 15px;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  .titulo_talles {
+    font-size: 1.5rem;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* botones de talle*/
+
+  .div-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 85px;
+    flex-wrap: wrap;
+  }
+
+  .talle {
+    width: 15%;
+    margin: 10px 0;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .talle-nuevo {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block;
+    font-size: 2rem;
+  }
+
+  .select-talle {
+    font-size: 2rem;
+  }
+
+  .cantidad {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block;
+    font-size: 2rem;
+  }
+
+  .select-cantidad {
+    font-size: 2rem;
+  }
+
+  .opcion-talle {
+    display: none;
+  }
+
+  .tarjetas {
+    font-size: 35px;
+    color: DodgerBlue;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tarjetas i {
+    width: 5%;
+    font-size: 2.8rem;
+  }
+
+  /*Botones de acceso a carrito, comprar, editar y borrar*/
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+
+  .boton {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: auto;
+    margin: 10px 10px;
+    background-color: #52be80;
+    font-size: 1.5rem;
+    width: 45%;
+  }
+
+  .boton-verde {
+    width: 45%;
+  }
+  
+  .boton-delete {
+    background-color: #2c3e50;
+    width: 100%;
+    margin: 0 30px;
+  }
+
+  .boton-editar {
+    background-color: #548cff;
+    width: 100%;
+  }
+
+  .div-descripcion {
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+    background-color: black;
+    padding-left: 20px;
+  }
+
+  .descripcion {
+    font-size: 1.7rem;
+    padding: 5px;
+    color: blanchedalmond;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 5%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  .logo-footer {
+    width: 30%;
+  }
+
+  .phrase {
+    width: 100%;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  /*Navbar*/
+
+  #check {
+    display: none;
+  }
+
+  a {
+    color: white;
+  }
+
+  ul {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    top: 160px;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(black, #232429);
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    font-size: 2rem;
+    margin: 2%;
+  }
+
+  .checked {
+    left: 0;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-home {
+    width: 100%;
+  }
+
+  .tope-page {
+    width: 100%;
+  }
+
+  .busqueda-producto {
+    width: 80%;
+  }
+
+  .mobile-nav input {
+    border: none;
+    padding: 15px;
+    background-color: white;
+    border-radius: 20px;
+    width: 85%;
+  }
+
+  .search-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .fa-bars {
+    color: white;
+    font-size: 3rem;
+  }
+  /*Product section*/
+
+  div.nombre-del-producto {
+    padding: 25px;
+    background: black;
+    height: 65px;
+  }
+  h3.nombre-del-producto {
+    color: #ffffff;
+    font-size: 2.5rem;
+  }
+
+  .imagen-producto {
+    padding: 30px;
+    background: black;
+  }
+
+  .imagen-producto img {
+    width: 100%;
+    height: 80%;
+    border-radius: 1%;
+  }
+
+  .precio {
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 0 20px 15px;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  .titulo_talles {
+    font-size: 1.5rem;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* botones de talle*/
+
+  .div-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 85px;
+    flex-wrap: wrap;
+  }
+
+  .talle {
+    width: 30%;
+    margin: 10px 0;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .talle-nuevo {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .cantidad {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .opcion-talle {
+    display: none;
+  }
+
+  .tarjetas {
+    font-size: 35px;
+    color: DodgerBlue;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tarjetas i {
+    width: 7%;
+  }
+
+  /*Botones de acceso a carrito, comprar, editar y borrar*/
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+
+  .boton {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: auto;
+    margin: 10px 10px;
+    background-color: #52be80;
+  }
+
+  .boton-verde {
+    width: 45%;
+  }
+
+  .boton-delete {
+    background-color: #2c3e50;
+  }
+
+  .boton-editar {
+    background-color: #548cff;
+  }
+
+  .div-descripcion {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .descripcion {
+    font-size: 1.7rem;
+    padding: 5px;
+    color: white;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 10%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  .logo-footer {
+    width: 50%;
+  }
+
+  .phrase {
+    width: 100%;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /*Navbar*/
+
+  #check {
+    display: none;
+  }
+
+  a {
+    color: white;
+  }
+
+  ul {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    top: 160px;
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(black, #232429);
+    transition: all 0.5s;
+  }
+  ul li {
+    display: block;
+    font-size: 2rem;
+    margin: 2%;
+  }
+
+  .checked {
+    left: 0;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-home {
+    width: 100%;
+  }
+
+  .tope-page {
+    width: 100%;
+  }
+
+  .busqueda-producto {
+    width: 80%;
+  }
+
+  .mobile-nav input {
+    border: none;
+    padding: 3%;
+    background-color: white;
+    border-radius: 20px;
+    width: 85%;
+  }
+
+  .search-nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .fa-bars {
+    color: white;
+    font-size: 2rem;
+  }
+
+  /*Product section*/
+
+  div.nombre-del-producto {
+    padding: 25px;
+    background: black;
+    height: 65px;
+  }
+  h3.nombre-del-producto {
+    color: #ffffff;
+    font-size: 2.5rem;
+  }
+
+  .imagen-producto {
+    padding: 30px;
+    background: black;
+  }
+
+  .imagen-producto img {
+    width: 100%;
+    height: 80%;
+    border-radius: 1%;
+  }
+
+  .precio {
+    display: flex;
+    color: white;
+    background-color: black;
+    padding: 0 20px 15px;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  .titulo_talles {
+    font-size: 1.5rem;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  /* botones de talle*/
+
+  .div-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 85px;
+    flex-wrap: wrap;
+  }
+
+  .talle {
+    width: 30%;
+    margin: 10px 0;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .opcion-talle {
+    display: none;
+  }
+  .talle-nuevo {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .cantidad {
+    text-align: center;
+    padding: 3px;
+    font-weight: bold;
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .tarjetas {
+    font-size: 35px;
+    color: DodgerBlue;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tarjetas i {
+    width: 15%;
+  }
+
+  /*Botones de acceso a carrito, comprar, editar y borrar*/
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .boton {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: 90%;
+    margin-top: 5px;
+    background-color: #52be80;
+  }
+
+  .boton-delete {
+    background-color: #2c3e50;
+  }
+
+  .boton-editar {
+    background-color: #548cff;
+  }
+
+  .div-descripcion {
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+    background-color: black;
+    color: blanchedalmond;
+  }
+
+  .descripcion {
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+
+  .descripcion p {
+    padding: 5px;
+  }
+  /* footer */
+
+  footer {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    padding: 20% 15%;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    font-size: 0.9em;
+    margin-left: 20px;
+  }
+
+  .logo-footer {
+    width: 50%;
+  }
+
+  .phrase {
+    margin-top: 50px;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    margin-top: 20px;
+  }
+}

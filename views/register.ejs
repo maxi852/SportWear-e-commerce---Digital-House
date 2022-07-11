@@ -1,0 +1,107 @@
+<%- include('partials/head.ejs') %>
+<head>    <link rel="stylesheet" href="/css/register-styles.css" />
+</head>
+
+  <body>
+    
+<%- include('partials/header.ejs') %>
+
+      <main>
+          <h2>Crea tu cuenta!</h2>
+          <h3>Registro</h3>
+
+        <div class="contenedor-form">
+          <form action="register" method="POST" enctype="multipart/form-data" class="form-register">
+              <div class="input-field">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" name="nombre" id="nombre">
+                  <% if (locals.errors && errors.nombre) { %>
+                    <p class="text-danger">
+                      <%= errors.nombre.msg %> 
+                    </p>
+                   
+                  <% } %>
+                  <p class="errorNombre text-danger"></p>
+              </div>
+
+              <div class="input-field">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+                <% if (locals.errors && errors.apellido) { %>
+                  <p class="text-danger">
+                    <%= errors.apellido.msg %> 
+                  </p>
+                 
+                <% } %>
+                <p class="errorApellido text-danger"></p>
+            </div>
+
+              <div class="input-field">
+                  <label for="email">Email</label>  
+                  <input type="email" name="email" id="email">
+                  <% if (locals.errors && errors.email) { %>
+                    <p class="text-danger">
+                      <%= errors.email.msg %> 
+                    </p>
+                   
+                  <% } %>
+                  <p class="errorEmail text-danger"></p>
+              </div>
+              <div class="input-field">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password">  
+                  <% if (locals.errors && errors.password) { %>
+                    <p class="text-danger">
+                      <%= errors.password.msg %> 
+                    </p>
+                   
+                  <% } %>
+                  <p class="errorPassword text-danger"></p>
+              </div>
+              <div class="input-field">
+                <label for="confirmPassword">Confirmar password</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">  
+                <p class="errorConfirmPassword text-danger"></p>
+               
+            </div>
+              <div class="input-field">
+                <label for="profileImage">Imagen del perfil</label>
+                <input type="file" name="profileImage" id="profileImage">
+                <% if (locals.errors && errors.profileImage) { %>
+                  <p class="text-danger">
+                    <%= errors.profileImage.msg %> 
+                  </p>
+                 
+                <% } %>
+             
+            </div>
+
+            <div class="input-field">
+              <label for="tipoUsuario">Tipo de usuario</label>
+              <select name="tipoUsuario" id="tipoUsuario">
+                <option value="0">Cliente</option>
+                <option value="1">Admin</option>
+              </select>           
+          </div>
+
+              <div class="text-margin-enviar">
+                  <button type="submit">Registrarse</button>
+              </div>
+              
+              
+            </div>         
+            </form>
+
+          <div class="contenedor-form">
+          <form action="/login" method="get" class="login-redirect">
+            <h4>Ya tenés cuenta? Ingresá con tu usuario!</h4>
+            <button type="submit">Ingresar</button>
+          </form>  
+        </div>        
+      </main>
+      <script src="/js/frontRegistroUsuario.js"></script>
+      
+      <%- include('partials/footer') %>
+      
+</body>
+</html>

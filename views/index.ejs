@@ -1,0 +1,78 @@
+  
+<%- include('partials/head.ejs') %>
+<head>    <link rel="stylesheet" href="/css/home.css" />
+</head>
+
+  <body>
+    
+<%- include('partials/header.ejs') %>
+
+    <main>
+
+      <div class="video-intro">
+        <video width="100%" autoplay muted loop> 
+          <source src="/video/video.mp4" type="video/mp4"  > 
+        </video>
+        <h1 class="titulo-intro">Bienvenidos a Sport Wear</h1>
+      </div>
+    
+
+    <section class="section-products">
+      <h2>Nuestros Productos</h2>
+      <div class="our-products">
+        <article class="product">
+          <img src="/images/images-home/images-productos-home/producto1.jpg" alt="producto1">
+          <button> <a href="http://localhost:5000/products"> VER PRODUCTOS<!--<i class="fas fa-arrow-right"></i>--></a> </button>
+        </article>
+        <article class="product">
+          <img src="/images/images-home/images-productos-home/producto2.jpg" alt="producto2">
+          <button><a href="http://localhost:5000/products"> VER PRODUCTOS<!--<i class="fas fa-arrow-right"></i>--></a></button>
+        </article>
+        <article class="product">
+          <img src="/images/images-home/images-productos-home/producto3.jpg" alt="producto3">
+          <button><a href="http://localhost:5000/products"> VER PRODUCTOS<!--<i class="fas fa-arrow-right"></i>--></a></button>
+        </article>
+        <article class="product">
+          <img src="/images/images-home/images-productos-home/producto4.jpg" alt="producto4">
+          <button><a href="http://localhost:5000/products"> VER PRODUCTOS<!--<i class="fas fa-arrow-right"></i>--></a></button>
+        </article>
+      </div>
+    </section>
+    <article class="promo-message">
+      <h3>Promo</h3>
+      <p> Aprovecha los descuentos y bonificaciones de fin de temporada, además puedes obtener envíos sin cargo.</p>
+      
+    </article>
+
+    <section class="text-info">
+      <div class="more-info-left">
+        <div class="image">
+          <img src="/images/images-home/home-stretching.jpg" alt="man-stretching">
+        </div>
+        <div class="parrafo">
+          <p>Segui avanzado con nuestra Ultraboost un diseño perfecto para una carrera más cómoda</p>
+        </div>
+      </div>
+      <div class="more-info-right">
+        <div class="parrafo">
+        <p>El futuro empieza de niños</p>
+      </div>
+        <div class="image image-right">
+          <img src="/images/images-home/home-jovenes.jpg" alt="man-stretching">
+        </div>
+      </div>
+      <div class="more-info-left">
+        <div class="image">
+          <img src="/images/images-home/home-soccer.jpg" alt="man-stretching">
+        </div>
+        <div class="parrafo">
+        <p>La diferencia entre lo imposible y lo posible depende de nuestra voluntad</p>
+      </div>
+      </div>
+    </section>
+  </main>
+
+<%- include('partials/footer') %>
+    
+  </body>
+</html>

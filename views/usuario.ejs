@@ -1,0 +1,76 @@
+<%- include('partials/head.ejs') %>
+<head><link rel="stylesheet" href="/css/profile.css" /></head>
+<%- include('partials/header.ejs') %>
+  <body>
+    <main>  
+      <div class="profile-head">
+        <h3>Hola <%= usuario.nombre  %> </h3>
+        <div class="user-image">
+          <img src="/images/profileImages/<%= usuario.profile_image  %> " alt="userImage" >
+        </div>  
+      </div>
+      <form action="/usuario?_method=PUT" method="post" enctype="multipart/form-data">
+        
+        <div class="input-field">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre">
+            <% if (locals.errors && errors.nombre) { %>
+              <p class="text-danger">
+                <%= errors.nombre.msg %> 
+              </p>
+            <% } %>
+        </div>
+        <div class="input-field">
+          <label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido">
+          <% if (locals.errors && errors.apellido) { %>
+            <p class="text-danger">
+              <%= errors.apellido.msg %> 
+            </p>       
+          <% } %>
+        </div>
+
+        <div class="input-field">
+          <label for="email">Email</label>  
+          <input type="email" name="email" id="email" placeholder="<%= usuario.email %>" disabled>   
+        </div>
+        <div class="input-field">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">  
+            <% if (locals.errors && errors.password) { %>
+              <p class="text-danger">
+                <%= errors.password.msg %> 
+              </p>
+             
+            <% } %>
+        </div>
+        <div class="input-field">
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" name="confirmPassword" id="confirmPassword">    
+        </div>
+        <div class="input-field">
+          <label for="profileImage">Profile image</label>
+          <input type="file" name="profileImage" id="profileImage">
+          <% if (locals.errors && errors.profileImage) { %>
+            <p class="text-danger">
+              <%= errors.profileImage.msg %> 
+            </p>
+           
+          <% } %>
+        </div>
+        <div class="input-field">
+          <label for="tipoUsuario">Tipo de usuario</label>
+          <select name="tipoUsuario" id="tipoUsuario">
+            <option value="0">Cliente</option>
+            <option value="1">Admin</option>
+          </select>           
+        </div>
+        <div class="text-margin-enviar">
+          <button type="submit">Modificar</button>
+        </div>
+      </form>
+    </main>    
+   
+      <%- include('partials/footer') %>
+  </body>
+</html>
